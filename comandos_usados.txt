@@ -1,0 +1,15 @@
+---compra e venda
+
+insert into tb_pedido (id_pedido, id_tipo_pedido, dt_pedido, nr_pedido, id_cliente, id_fornecedor, id_filial, vl_total_pedido) values (2, 2, 2000/09/12, 13461165, 2, 2, 2, 752.44);
+
+insert into tb_pedido (id_pedido, id_tipo_pedido, dt_pedido, nr_pedido, id_cliente, id_fornecedor, id_filial, vl_total_pedido) values (1, 1, 12/02/200, 15124151, 1, 1, 1, 241.14);
+
+---notas fiscais
+
+insert into tb_nf (id_nf, id_tipo_operacao, dt_emissao, nr_nota, id_cliente, id_fornecedor, id_filial, id_tipo_pagamento, vl_total_nota) values (1, 1, 2001-08-14, 11231243, 1, 1, 1, 1, 124.52);
+
+insert into tb_nf (id_nf, id_tipo_operacao, dt_emissao, nr_nota, id_cliente, id_fornecedor, id_filial, id_tipo_pagamento, vl_total_nota) values (2, 2, 2001-07-12, 64278562, 2, 2, 2, 2, 637.42);
+
+
+---relatorio 1 (erro de sintaxe)
+select fi.id_filial fi.nm_filial, pro.id_produto, pro.ds_produto, es.qt_estoque_disponivel from tb_filial fi, tb_produto pro, tb_estoque es where fi.id_filial = es.id_filial, es.id_produto = pro.id_produto order by fi.id_filial ;
